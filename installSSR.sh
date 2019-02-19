@@ -1,15 +1,13 @@
 #!bin/bash
 
 #install ssr
-echo 
-
-
-
 if [[ -f kernalReinstalled ]]
 then
 echo -e "skip install ssr"
 else
 echo -e "install ssr..."
+curl https://raw.githubusercontent.com/chinaljw/installSSR/master/ssr.sh?token=AJWK6p8M9x_vrCbWbjkIU4q-PD8YZMjsks5ca870wA%3D%3D > ssr.sh
+echo -e "" | ssr.sh
 fi
 
 #reinstall kernal
