@@ -22,7 +22,7 @@ reboot
 fi
 
 #install ribu
-if [[ -f kernalReinstalled && -f rebuInstalled ]]
+if [[ -f kernalReinstalled && !(-f rebuInstalled) ]]
 then
 echo -e "install rebu..."
 wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder.sh && bash serverspeeder.sh

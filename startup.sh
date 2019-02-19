@@ -4,5 +4,5 @@ then
 bash installSSR.sh
 else
 curl https://raw.githubusercontent.com/chinaljw/installSSR/master/installSSR.sh > installSSR.sh
-bash startup.sh
+bash installSSR.sh
 fi
