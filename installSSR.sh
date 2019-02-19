@@ -6,7 +6,7 @@ then
 echo -e "skip install ssr"
 else
 echo -e "install ssr..."
-curl https://raw.githubusercontent.com/chinaljw/installSSR/436716acd5d35d4b10f03a8a8c0efaf0edd1f288/ssr.sh > ssr.sh
+curl https://raw.githubusercontent.com/chinaljw/installSSR/master/ssr.sh > ssr.sh
 echo -e "1\n1992\nweigegenb666\n10\n1\n1\n\n\n\n" | sh ssr.sh
 fi
 
