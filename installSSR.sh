@@ -16,7 +16,7 @@ then
 echo -e "skip reinstall kernal"
 else
 echo -e "reinstall kernal..."
-rpm -ivh https://xz.wn789.com/CentOSkernel/kernel-2.6.32-504.3.3.el6.x86_64.rpm --force
+rpm -ivh http://xz.wn789.com/CentOSkernel/kernel-2.6.32-504.3.3.el6.x86_64.rpm --force
 touch kernalReinstalled
 reboot
 fi
