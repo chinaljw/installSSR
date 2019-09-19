@@ -7,7 +7,7 @@ echo -e "skip install ssr"
 else
 echo -e "install ssr..."
 curl https://raw.githubusercontent.com/chinaljw/installSSR/master/shadowsocks-all.sh > shadowsocks-all.sh
-echo -e "4\nweigegenb666\n10160\n13\ny\n2\n\n" | sh shadowsocks-all.sh
+echo -e "4\nweigegenb666\n10160\n13\ny\n2\n" | sh shadowsocks-all.sh
 fi
 
 #reinstall kernal
