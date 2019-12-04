@@ -6,7 +6,7 @@ yum install cyrus-sasl-plain -y
 
 curl https://raw.githubusercontent.com/chinaljw/installSSR/master/Muttrc > Muttrc
 curl https://raw.githubusercontent.com/chinaljw/installSSR/master/emailList > emailList
-echo "\n" >> Muttrc
+echo -e "\n" >> Muttrc
 echo "set from=$1" >> Muttrc
 echo "set smtp_pass=$2" >> Muttrc
 name=weigege
