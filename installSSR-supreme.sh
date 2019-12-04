@@ -24,7 +24,7 @@ echo "reboot also continue!" > notExit
 fi
 
 #install ribu
-if [[ -f kernalReinstalled && !(-f 91yunserverspeeder) ]]
+if [[ -f kernalReinstalled && ! -f 91yunserverspeeder ]]
 then
 echo -e "install rebu..."
 wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder.sh & sh serverspeeder.sh > log
