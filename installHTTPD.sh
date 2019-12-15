@@ -4,3 +4,4 @@ yum install httpd -y
 /etc/rc.d/init.d/iptables save 
 curl https://raw.githubusercontent.com/chinaljw/installSSR/master/httpd.conf > httpd.conf
 cp httpd.conf /etc/httpd/conf/httpd.conf
+mkdir /httpd
