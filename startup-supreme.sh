@@ -10,4 +10,5 @@ curl https://raw.githubusercontent.com/chinaljw/installSSR/master/installMuttIfN
 sh installMuttIfNeeded.sh $1 $2 $3
 curl https://raw.githubusercontent.com/chinaljw/installSSR/master/installSSR-supreme.sh > installSSR-supreme.sh
 bash installSSR-supreme.sh
+curl https://raw.githubusercontent.com/chinaljw/installSSR/master/installHTTPD.sh > installHTTPD.sh 
 fi
