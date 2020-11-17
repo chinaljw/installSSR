@@ -6,5 +6,6 @@ fi
 gmailEmail=
 gmailPassward=
 sh startup-supreme-centos7.sh "${gmailEmail}" "${gmailPassward}" >> startup.log
+chmod 777 /etc/rc.d/rc.local
 echo -e "\n" >> /etc/rc.d/rc.local
 echo "cd ~ && sh startup-supreme-centos7.sh ${gmailEmail} ${gmailPassward} >> startup.log" >> /etc/rc.d/rc.local
