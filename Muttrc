@@ -4802,7 +4802,7 @@ set charset="utf-8"
 #自定义发件人信息 
 set envelope_from=yes #这条默认没有，请手动添加
 set use_from=yes 
-set from=qq781342306@gmail.com
+set from=""
 set realname="weigege"
 
 set smtp_authenticators="gssapi:login"
@@ -4810,4 +4810,4 @@ set smtp_url="smtp://qq781342306@gmail.com@smtp.gmail.com:587/"
 #set content_type="text/html"
 
 # Outgoing
-set smtp_pass="pntmnrxwbzopzqrx"
+set smtp_pass=""
