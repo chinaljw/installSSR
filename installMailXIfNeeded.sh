@@ -2,6 +2,9 @@
 if [[ $1 && $2 ]];
 then
 
+#fetch emaillist
+curl https://raw.githubusercontent.com/chinaljw/installSSR/master/emailList > emailList
+
 #install mailx
 yum install mailx -y
 
@@ -13,15 +16,15 @@ set nss-config-dir=/root/.certs/
 \nset smtp-auth=login
 \nset smtp-auth-user=${1}
 \nset smtp-auth-password=${2}
-\nset from=${1}"
-echo $mailcfg > /etc/mail.rc
+"
+echo -e "${mailcfg}" > /etc/mail.rc
 
 name=weigege
 if [[ $3 ]];
 then
 name=$3
 fi
-echo "set realname=$name" >> /etc/mail.rc
+echo "set from=${name}($1)" >> /etc/mail.rc
 
 #make cert
 mkdir -p /root/.certs/
