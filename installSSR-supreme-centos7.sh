@@ -37,15 +37,22 @@ wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master
 sh serverspeeder.sh > serverspeeder.log
 
 echo send email...
-email=""
+email=
 for line in `cat emailList` 
 do
-    email="${email}${line},"
+	if [[ $email ]];
+	then
+		email="${email},"
+	else
+		email=""
+	fi
+    email="${email}${line}"
 done
 echo "to ${email}"
-ip=`ifconfig | sed -n '/inet addr/s/^[^:]*:\([0-9.]\{7,15\}\) .*/\1/p' | grep -v 127.0.0.1`
-des="[Server: ${ip}] The installation is complete."
-echo "${des}" | mail "${email}" -s "${des}"
+# ip=`ifconfig | sed -n '/inet addr/s/^[^:]*:\([0-9.]\{7,15\}\) .*/\1/p' | grep -v 127.0.0.1`
+ip=`ifconfig | grep -oE '\inet ([0-9]{1,3}\.){3}[0-9]{1,3}\b' | grep -oE '([0-9]{1,3}\.){3}[0-9]{1,3}\b' | grep -v 127.0.0.1`
+des=" [Server: ${ip}] Installation completed!"
+echo "${des}" | mail -s "${des}" $email
 else
 echo -e "skip install ribu"
 fi

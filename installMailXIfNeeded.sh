@@ -15,8 +15,7 @@ set nss-config-dir=/root/.certs/
 \nset smtp=smtps://smtp.qq.com:465
 \nset smtp-auth=login
 \nset smtp-auth-user=${1}
-\nset smtp-auth-password=${2}
-"
+\nset smtp-auth-password=${2}"
 echo -e "${mailcfg}" > /etc/mail.rc
 
 name=weigege
@@ -24,7 +23,7 @@ if [[ $3 ]];
 then
 name=$3
 fi
-echo "set from=${name}($1)" >> /etc/mail.rc
+echo "set from=${1}(${name})" >> /etc/mail.rc
 
 #make cert
 mkdir -p /root/.certs/
