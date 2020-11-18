@@ -6,7 +6,7 @@ else
 curl https://raw.githubusercontent.com/chinaljw/installSSR/master/connectedIPs.sh > connectedIPs.sh
 curl https://raw.githubusercontent.com/chinaljw/installSSR/master/installJQ.sh > installJQ.sh
 bash installJQ.sh
-curl https://raw.githubusercontent.com/chinaljw/installSSR/master/installMuttIfNeeded.sh > installMuttIfNeeded.sh
+curl https://raw.githubusercontent.com/chinaljw/installSSR/master/installMailXIfNeeded.sh > installMuttIfNeeded.sh
 sh installMuttIfNeeded.sh $1 $2 $3
 curl https://raw.githubusercontent.com/chinaljw/installSSR/master/installHTTPD.sh > installHTTPD.sh
 sh installHTTPD.sh
