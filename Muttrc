@@ -3439,7 +3439,7 @@ attachments   -I message/external-body
 # mutt uses $charset as a fallback.
 # 
 # 
-# set sendmail="/usr/sbin/sendmail -oem -oi"
+set sendmail="/usr/sbin/sendmail -oem -oi"
 #
 # Name: sendmail
 # Type: path
@@ -4804,6 +4804,8 @@ set envelope_from=yes #这条默认没有，请手动添加
 set use_from=yes 
 set from=""
 set realname="weigege"
+set imap_user = "qq781342306@gmail.com"
+set imap_pass = ""
 
 set smtp_authenticators="gssapi:login"
 set smtp_url="smtp://qq781342306@gmail.com@smtp.gmail.com:587/"

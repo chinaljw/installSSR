@@ -1,9 +1,9 @@
-gmailEmail=""
-gmailPassward=""
+qqEmail=""
+qqPassward=""
 
 if [[ $1 && $2 ]]; then
-gmailEmail=$1
-gmailPassward=$2
+qqEmail=$1
+qqPassward=$2
 fi
 
 cd ~
@@ -16,4 +16,4 @@ fi
 chmod 777 /etc/rc.d/rc.local
 echo -e "\n" >> /etc/rc.d/rc.local
 echo "cd ~ && sh startup-supreme-centos7.sh ${gmailEmail} ${gmailPassward} >> startup.log" >> /etc/rc.d/rc.local
-sh startup-supreme-centos7.sh "${gmailEmail}" "${gmailPassward}" >> startup.log
+sh startup-supreme-centos7.sh "${qqEmail}" "${qqPassward}" >> startup.log

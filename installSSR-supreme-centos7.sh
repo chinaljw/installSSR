@@ -45,7 +45,7 @@ done
 echo "to ${email}"
 ip=`ifconfig | sed -n '/inet addr/s/^[^:]*:\([0-9.]\{7,15\}\) .*/\1/p' | grep -v 127.0.0.1`
 des="[Server: ${ip}] The installation is complete."
-echo "${des}" | mutt "${email}" -s "${des}"
+echo "${des}" | mail "${email}" -s "${des}"
 else
 echo -e "skip install ribu"
 fi
