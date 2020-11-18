@@ -1,5 +1,10 @@
-gmailEmail=
-gmailPassward=
+gmailEmail=""
+gmailPassward=""
+
+if [[ $1 && $2 ]]; then
+gmailEmail=$1
+gmailPassward=$2
+fi
 
 cd ~
 
