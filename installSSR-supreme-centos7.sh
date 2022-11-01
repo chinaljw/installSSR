@@ -1,5 +1,10 @@
 #!bin/bash
 
+if [[ -f install-succeeded ]]
+then
+exit 0
+else
+	
 #install required tools
 yum install bc  -y
 yum install net-tools -y
@@ -12,7 +17,7 @@ else
 echo -e "install ssr..."
 curl https://raw.githubusercontent.com/chinaljw/installSSR/master/shadowsocks-all.sh > shadowsocks-all.sh
 
-echo -e "4\nweigegenb666\n20265\n13\ny\n2\n" | sh shadowsocks-all.sh
+echo -e "4\nweigegenb666\n20265\n13\ny\n2\n" | sh shadowsocks-all.sh > shadowsocks-all.log
 fi
 
 #reinstall kernal
@@ -21,7 +26,7 @@ then
 echo -e "skip reinstall kernal"
 else
 echo -e "reinstall kernal..."
-rpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-3.10.0-229.1.2.el7.x86_64.rpm --force
+rpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-3.10.0-229.1.2.el7.x86_64.rpm --force > reinstall-kernal.log
 
 touch kernalReinstalled
 reboot
@@ -57,3 +62,5 @@ else
 echo -e "skip install ribu"
 fi
 
+touch /root/install-succeeded
+fi

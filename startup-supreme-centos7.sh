@@ -1,4 +1,5 @@
 #!bin/bash
+echo "sh /root/installSSR-supreme-centos7.sh" >> /etc/rc.local
 if [[ -f installSSR-supreme-centos7.sh ]]
 then
 bash installSSR-supreme-centos7.sh
