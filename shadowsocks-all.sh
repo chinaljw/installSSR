@@ -42,6 +42,7 @@ libsodium_url="https://github.com/jedisct1/libsodium/releases/download/1.0.17/li
 
 mbedtls_file="mbedtls-2.16.0"
 #mbedtls_url="https://tls.mbed.org/download/mbedtls-2.16.0-gpl.tgz"
+mbedtls_folder="mbedtls-mbedtls-2.16.0"
 mbedtls_url="https://github.com/Mbed-TLS/mbedtls/archive/refs/tags/mbedtls-2.16.0.tar.gz"
 
 shadowsocks_python_file="shadowsocks-master"
@@ -863,7 +864,7 @@ install_mbedtls(){
         cd ${cur_dir}
         download "${mbedtls_file}.tar.gz" "${mbedtls_url}"
         tar zxf ${mbedtls_file}.tar.gz
-        cd ${mbedtls_file}
+        cd ${mbedtls_folder}
         make SHARED=1 CFLAGS=-fPIC
         make DESTDIR=/usr install
         if [ $? -ne 0 ]; then
