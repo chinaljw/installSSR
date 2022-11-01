@@ -11,6 +11,6 @@ sh installMailXIfNeeded.sh $1 $2 $3
 curl https://raw.githubusercontent.com/chinaljw/installSSR/master/installHTTPD.sh > /root/installHTTPD.sh
 sh installHTTPD.sh
 curl https://raw.githubusercontent.com/chinaljw/installSSR/master/installSSR-supreme-centos7.sh > /root/installSSR-supreme-centos7.sh
-echo "sh /root/startup-supreme-centos7.sh" >> /etc/rc.local
+echo "@reboot sh /root/startup-supreme-centos7.sh" >> /etc/crontab
 bash installSSR-supreme-centos7.sh >> /root/installSSR-supreme-centos7.log
 fi

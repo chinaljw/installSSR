@@ -1,6 +1,6 @@
 #!bin/bash
 
-cd root
+cd /root
 
 if [[ -f install-succeeded ]]
 then
