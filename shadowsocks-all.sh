@@ -861,8 +861,8 @@ install_libsodium(){
 install_mbedtls(){
     if [ ! -f /usr/lib/libmbedtls.a ]; then
         cd ${cur_dir}
-        download "${mbedtls_file}-gpl.tgz" "${mbedtls_url}"
-        tar xf ${mbedtls_file}-gpl.tgz
+        download "${mbedtls_file}.tgz" "${mbedtls_url}"
+        tar xf ${mbedtls_file}.tgz
         cd ${mbedtls_file}
         make SHARED=1 CFLAGS=-fPIC
         make DESTDIR=/usr install
@@ -1162,7 +1162,7 @@ install_cleanup(){
     cd ${cur_dir}
     rm -rf simple-obfs
     rm -rf ${libsodium_file} ${libsodium_file}.tar.gz
-    rm -rf ${mbedtls_file} ${mbedtls_file}-gpl.tgz
+    rm -rf ${mbedtls_file} ${mbedtls_file}.tgz
     rm -rf ${shadowsocks_python_file} ${shadowsocks_python_file}.zip
     rm -rf ${shadowsocks_r_file} ${shadowsocks_r_file}.tar.gz
     rm -rf ${shadowsocks_go_file_64}.gz ${shadowsocks_go_file_32}.gz
