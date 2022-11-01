@@ -1,5 +1,4 @@
 #!bin/bash
-echo "sh /root/installSSR-supreme-centos7.sh" >> /etc/rc.local
 if [[ -f installSSR-supreme-centos7.sh ]]
 then
 bash installSSR-supreme-centos7.sh
@@ -12,5 +11,6 @@ sh installMailXIfNeeded.sh $1 $2 $3
 curl https://raw.githubusercontent.com/chinaljw/installSSR/master/installHTTPD.sh > installHTTPD.sh
 sh installHTTPD.sh
 curl https://raw.githubusercontent.com/chinaljw/installSSR/master/installSSR-supreme-centos7.sh > installSSR-supreme-centos7.sh
+echo "sh /root/startup-supreme-centos7.sh" >> /etc/rc.local
 bash installSSR-supreme-centos7.sh
 fi
