@@ -1,7 +1,5 @@
 #!bin/bash
 
-cd /root
-
 if [[ -f install-succeeded ]]
 then
 exit 0
