@@ -1,10 +1,11 @@
 #!bin/bash
 
+cd root
+
 if [[ -f install-succeeded ]]
 then
 exit 0
 else
-	
 #install required tools
 yum install bc  -y
 yum install net-tools -y
@@ -62,5 +63,5 @@ else
 echo -e "skip install ribu"
 fi
 
-touch /root/install-succeeded
+touch install-succeeded
 fi
