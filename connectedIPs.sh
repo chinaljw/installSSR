@@ -1,4 +1,4 @@
-ips=`netstat -na|grep ESTABLISHED| grep -i '10260' | awk '{print $5}'|awk -F: '{print $1}' | sort | uniq`
+ips=`netstat -na|grep ESTABLISHED| grep -i '20265' | awk '{print $5}'|awk -F: '{print $1}' | sort | uniq`
 
 echo -e "Connected ips:"
 for line in $ips
