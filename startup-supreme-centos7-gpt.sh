@@ -13,5 +13,6 @@ curl https://raw.githubusercontent.com/chinaljw/installSSR/master/installHTTPD.s
 sh installHTTPD.sh
 curl https://raw.githubusercontent.com/chinaljw/installSSR/master/installSSR-supreme-centos7-gpt.sh > installSSR-supreme-centos7-gpt.sh
 echo "sh /root/startup-supreme-centos7-gpt.sh >> /root/startup-supreme-centos7-gpt.log" >> /etc/rc.d/rc.local
+chmod +x /etc/rc.d/rc.local
 bash installSSR-supreme-centos7-gpt.sh >> installSSR-supreme-centos7-gpt.log
 fi
