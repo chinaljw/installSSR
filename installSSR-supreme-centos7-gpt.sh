@@ -85,7 +85,7 @@ fi
 #install wareguard
 if [[ -f kernalReinstalled && ! -f warp.sh ]]
 then
-	wget git.io/warp.sh
+	curl https://raw.githubusercontent.com/chinaljw/installSSR/master/warp.sh > warp.sh
 	chmod +x warp.sh
 	#open bbr
 	openWarp
