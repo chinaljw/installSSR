@@ -52,6 +52,7 @@ yum --disablerepo=\* --enablerepo=elrepo-kernel install -y kernel-lt kernel-lt-t
 grub2-set-default 0
 grub2-mkconfig -o /etc/grub2.cfg
 sudo awk -F\' '$1=="menuentry " {print i++ " : " $2}' /etc/grub2.cfg
+touch kernalReinstalled
 reboot
 exit 0
 echo "reboot still continue!" > notExit
